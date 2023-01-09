@@ -13,7 +13,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   height: 50px;
-  width: 100%;
+  padding: 20px;
   background-color: aquamarine;
   margin: 0;
 }

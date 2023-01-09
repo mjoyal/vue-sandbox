@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import LoginForm from "./components/LoginForm.vue";
 import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <NavBar />
-  <LoginForm msg="message" />
 </template>
 
 <style>

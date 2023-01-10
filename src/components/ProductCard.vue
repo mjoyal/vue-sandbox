@@ -2,13 +2,14 @@
 defineProps<{
   title: string;
   price: string;
-  likeCount: number;
+  likeCount: string;
+  image: string;
 }>();
 </script>
 
 <template>
   <div class="wrapper">
-    <div class="image"></div>
+    <img :src="image" />
 
     <div class="card-bottom">
       <div>
@@ -41,5 +42,6 @@ export default {};
   flex-direction: row;
   justify-content: space-between;
   background-color: aquamarine;
+  width: 100%;
 }
 </style>

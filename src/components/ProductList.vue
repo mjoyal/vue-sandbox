@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import ProductCard from "./ProductCard.vue";
 import { products } from "../data";
+
+import { useProductStore } from "@/stores/ProductStore";
+
+const productStore = useProductStore();
 </script>
 
 <template>
   <div>
     <ProductCard
-      v-for="product in products"
+      v-for="product in productStore.products"
       :key="product.id"
       :title="product.title"
       :price="product.price"

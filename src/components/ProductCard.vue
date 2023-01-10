@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
-  price: string;
-  likeCount: string;
+  price: number;
+  likeCount: number;
   image: string;
 }>();
 </script>
@@ -14,7 +14,7 @@ defineProps<{
     <div class="card-bottom">
       <div>
         <h5>{{ title }}</h5>
-        <p>{{ price }}</p>
+        <p>${{ price }}</p>
       </div>
       <div>
         <p>❤️ {{ likeCount }}</p>

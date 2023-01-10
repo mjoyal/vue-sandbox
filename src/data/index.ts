@@ -1,4 +1,15 @@
 import { faker } from "@faker-js/faker";
+import backpack from "../assets/images/backpack.jpeg";
+import candle from "../assets/images/candle.jpeg";
+
+import cloth from "../assets/images/cloth.jpeg";
+import curology from "../assets/images/curology.jpeg";
+import foundation from "../assets/images/foundation.jpeg";
+import hempOil from "../assets/images/hemp-oil.jpeg";
+import lamp from "../assets/images/lamp.jpeg";
+import  nike from "../assets/images/nike.jpeg";
+import poetry from "../assets/images/poetry.jpeg";
+import record from "../assets/images/record.jpeg";
 
 const getProducts = () => {
   const productData = [];
@@ -22,7 +33,7 @@ const products = [
     id: 1,
     title: "Organic Sponge Cloths",
     price: 30,
-    image: "",
+    image: cloth,
     discount: 20,
     likeCount: 401,
     isLikedByCurrentUser: false,
@@ -31,7 +42,7 @@ const products = [
     id: 2,
     title: "Retro Record Player",
     price: 379,
-    image: "",
+    image: record,
     discount: 0,
     likeCount: 430,
     isLikedByCurrentUser: true,
@@ -40,7 +51,7 @@ const products = [
     id: 3,
     title: "Milk & Honey Poetry",
     price: 27,
-    image: "",
+    image: poetry,
     discount: 0,
     likeCount: 244,
     isLikedByCurrentUser: true,
@@ -49,7 +60,7 @@ const products = [
     id: 4,
     title: "Pastel Nike",
     price: 289,
-    image: "",
+    image: nike,
     discount: 0,
     likeCount: 102,
     isLikedByCurrentUser: false,
@@ -59,7 +70,7 @@ const products = [
     id: 5,
     title: "Wavy Globe Lamp",
     price: 359,
-    image: "",
+    image: lamp,
     discount: 15,
     likeCount: 145,
     isLikedByCurrentUser: false,
@@ -69,7 +80,7 @@ const products = [
     id: 6,
     title: "Biglow Foundation",
     price: 35,
-    image: "",
+    image: foundation,
     discount: 10,
     likeCount: 59,
     isLikedByCurrentUser: true,
@@ -78,7 +89,7 @@ const products = [
     id: 7,
     title: "Curology Duo",
     price: 79,
-    image: "",
+    image: curology,
     discount: 0,
     likeCount: 87,
     isLikedByCurrentUser: false,
@@ -88,7 +99,7 @@ const products = [
     id: 8,
     title: "Leather Napsack",
     price: 189,
-    image: "",
+    image: backpack,
     discount: 0,
     likeCount: 126,
     isLikedByCurrentUser: false,
@@ -98,7 +109,7 @@ const products = [
     id: 9,
     title: "Organic Lavender Candle",
     price: 30,
-    image: "",
+    image: candle,
     discount: 0,
     likeCount: 346,
     isLikedByCurrentUser: false,
@@ -108,7 +119,7 @@ const products = [
     id: 10,
     title: "Organic Hemp Seed Oil",
     price: 30,
-    image: "",
+    image: hempOil,
     discount: 10,
     likeCount: 419,
     isLikedByCurrentUser: true,

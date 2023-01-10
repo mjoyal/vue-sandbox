@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div class="wrapper">
-    <img :src="image" />
+    <img :src="image" width="250" />
 
     <div class="card-bottom">
       <div>

@@ -15,9 +15,22 @@ export const useProductStore = defineStore({
   state: () => ({
     products,
   }),
-  getters: {},
+  getters: {
+    getProductById: (state) => {
+      return (productId: number) =>
+        state.products.find((product) => product.id === productId);
+    },
+  },
   actions: {
-    toggleLike() {},
+    toggleLike(id: number) {
+      const product = this.getProductById(id);
+
+      if (!product) {
+        return;
+      }
+
+      product.isLikedByCurrentUser = !product?.isLikedByCurrentUser;
+    },
 
     removeItem() {},
   },

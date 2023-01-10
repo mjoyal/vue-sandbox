@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useProductStore } from "@/stores/ProductStore";
+
+const productStore = useProductStore();
+
 defineProps<{
   id: number;
   title: string;
@@ -18,7 +22,7 @@ defineProps<{
         <h5>{{ title }}</h5>
         <p>${{ price }}</p>
       </div>
-      <div>
+      <button @click="productStore.toggleLike(id)">
         <p>
           <i
             v-if="isLiked"
@@ -29,13 +33,14 @@ defineProps<{
 
           {{ likeCount }}
         </p>
-      </div>
+    </button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export default {};
+export default {
+};
 </script>
 
 <style scoped>
@@ -60,5 +65,10 @@ export default {};
   justify-content: space-between;
   background-color: aquamarine;
   width: 100%;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
 }
 </style>

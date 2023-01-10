@@ -12,10 +12,12 @@ const productStore = useProductStore();
     <ProductCard
       v-for="product in productStore.products"
       :key="product.id"
+      :id="product.id"
       :title="product.title"
       :price="product.price"
       :likeCount="product.likeCount"
       :image="product.image"
+      :isLiked="product.isLikedByCurrentUser"
     />
   </div>
 </template>
@@ -28,9 +30,7 @@ export default {
     };
   },
   methods: {},
-  created() {
-    console.log(this.products);
-  },
+  created() {},
 };
 </script>
 

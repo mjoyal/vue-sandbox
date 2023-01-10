@@ -1,9 +1,11 @@
 <script setup lang="ts">
 defineProps<{
+  id: number;
   title: string;
   price: number;
   likeCount: number;
   image: string;
+  isLiked: boolean;
 }>();
 </script>
 
@@ -18,7 +20,14 @@ defineProps<{
       </div>
       <div>
         <p>
-          <i class="material-icons favorite-icon">favorite</i> {{ likeCount }}
+          <i
+            v-if="isLiked"
+            class="material-icons favorite-icon favourite-icon-isLiked"
+            >favorite</i
+          >
+          <i v-else class="material-icons favorite-icon">favorite</i>
+
+          {{ likeCount }}
         </p>
       </div>
     </div>
@@ -30,8 +39,10 @@ export default {};
 </script>
 
 <style scoped>
-.favorite-icon {
+.favourite-icon-isLiked {
   color: red;
+}
+.favorite-icon {
   font-size: 15px;
 }
 .wrapper {

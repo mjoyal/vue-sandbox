@@ -17,7 +17,9 @@ defineProps<{
         <p>${{ price }}</p>
       </div>
       <div>
-        <p>❤️ {{ likeCount }}</p>
+        <p>
+          <i class="material-icons favorite-icon">favorite</i> {{ likeCount }}
+        </p>
       </div>
     </div>
   </div>
@@ -28,6 +30,10 @@ export default {};
 </script>
 
 <style scoped>
+.favorite-icon {
+  color: red;
+  font-size: 15px;
+}
 .wrapper {
   width: 250px;
   background-color: beige;

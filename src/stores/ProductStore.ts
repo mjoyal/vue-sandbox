@@ -8,12 +8,14 @@ interface IProduct {
   image: string;
   discount: number;
   likeCount: number;
+  isLikedByCurrentUser: boolean;
 }
 
 export const useProductStore = defineStore({
   id: "product",
   state: () => ({
-    products,
+    products: [...products] as IProduct[],
+    cart: [] as IProduct[],
   }),
   getters: {
     getProductById: (state) => {
@@ -32,6 +34,24 @@ export const useProductStore = defineStore({
       product.isLikedByCurrentUser = !product?.isLikedByCurrentUser;
     },
 
-    removeItem() {},
+    addToCart(id: number) {
+      const product = this.getProductById(id);
+
+      if (!product) {
+        return;
+      }
+
+      this.products.push(product);
+    },
+
+    removeFromCart(id: number) {
+      const product = this.getProductById(id);
+
+      if (!product) {
+        return;
+      }
+
+      this.products = this.products.filter((product) => product.id !== id);
+    },
   },
 });

@@ -15,7 +15,15 @@ defineProps<{
 
 <template>
   <div class="wrapper">
-    <img :src="image" width="250" />
+    <div
+      class="product-div"
+      @click="productStore.addToCart(id)"
+      @mouseover="hover = true"
+      @mouseleave="hover = false"
+    >
+      <img :src="image" width="250" />
+      <div class="add-to-cart" v-if="hover"><p>Add to Cart</p></div>
+    </div>
 
     <div class="card-bottom">
       <div>
@@ -33,13 +41,18 @@ defineProps<{
 
           {{ likeCount }}
         </p>
-    </button>
+      </button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
+  data() {
+    return {
+      hover: false,
+    };
+  },
 };
 </script>
 
@@ -68,7 +81,25 @@ export default {
 }
 
 button {
-    border: 0;
-    background-color: transparent;
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  height: 100%;
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.product-div {
+  cursor: pointer;
 }
 </style>

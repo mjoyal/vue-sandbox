@@ -22,9 +22,6 @@ defineProps<{
     <td class="align-top py-5">
       <p>{{ cartItem.count }}</p>
     </td>
-    <td>
-      <DropDownButton :labels="[1, 2, 3]" />
-    </td>
     <td class="align-top py-5">
       <p>${{ cartItem.price * cartItem.count }}</p>
     </td>

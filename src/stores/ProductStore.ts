@@ -41,7 +41,7 @@ export const useProductStore = defineStore({
         return;
       }
 
-      this.products.push(product);
+      this.cart.push(product);
     },
 
     removeFromCart(id: number) {
@@ -51,7 +51,7 @@ export const useProductStore = defineStore({
         return;
       }
 
-      this.products = this.products.filter((product) => product.id !== id);
+      this.cart = this.cart.filter((product) => product.id !== id);
     },
   },
 });

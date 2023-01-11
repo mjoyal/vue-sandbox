@@ -51,7 +51,15 @@ export const useProductStore = defineStore({
         return;
       }
 
-      product.isLikedByCurrentUser = !product?.isLikedByCurrentUser;
+      if (product.isLikedByCurrentUser) {
+        product.isLikedByCurrentUser = false;
+        product.likeCount--;
+
+        return;
+      }
+
+      product.isLikedByCurrentUser = true;
+      product.likeCount++;
     },
 
     addToCart(id: number) {

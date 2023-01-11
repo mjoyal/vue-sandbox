@@ -22,18 +22,14 @@ defineProps<{
         <h5>{{ title }}</h5>
         <p>${{ price }}</p>
       </div>
-      <button @click="productStore.toggleLike(id)">
-        <p>
-          <i
-            v-if="isLiked"
-            class="material-icons favorite-icon favourite-icon-isLiked"
-            >favorite</i
-          >
-          <i v-else class="material-icons favorite-icon">favorite</i>
 
-          {{ likeCount }}
-        </p>
-      </button>
+      <p>
+        <i class="material-icons favorite-icon">favorite</i>
+
+        {{ likeCount }}
+      </p>
+
+      <button @click="productStore.removeFromCart(id)">Remove</button>
     </div>
   </div>
 </template>

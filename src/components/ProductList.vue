@@ -31,5 +31,6 @@ div {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 10px;
 }
 </style>

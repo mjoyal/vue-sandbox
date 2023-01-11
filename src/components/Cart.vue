@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductCard from "./ProductCard.vue";
+import CartProductCard from "./CartProductCard.vue";
 
 import { useProductStore } from "@/stores/ProductStore";
 
@@ -7,9 +7,9 @@ const productStore = useProductStore();
 </script>
 
 <template>
-  <div>
+  <div class="container p-5">
     <h1>Cart</h1>
-    <ProductCard
+    <CartProductCard
       v-for="product in productStore.cart"
       :key="product.id"
       :id="product.id"

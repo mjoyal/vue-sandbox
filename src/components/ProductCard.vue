@@ -14,24 +14,29 @@ defineProps<{
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="container w-64">
     <div
-      class="product-div"
       @click="productStore.addToCart(id)"
       @mouseover="hover = true"
       @mouseleave="hover = false"
+      class="bg-pink-500 container relative cursor-pointer"
     >
-      <img :src="image" width="250" />
-      <div class="add-to-cart" v-if="hover"><p>Add to Cart</p></div>
+      <img :src="image" class="w-64 h-full" />
+      <div
+        v-if="hover"
+        class="container absolute bottom-0 flex justify-center align-center p-3 bg-white/70"
+      >
+        <p>Add to Cart</p>
+      </div>
     </div>
 
-    <div class="card-bottom">
+    <div class="container flex justify-between pt-2">
       <div>
-        <h5>{{ title }}</h5>
-        <p>${{ price }}</p>
+        <p class="font-medium">{{ title }}</p>
+        <p class="font-light">${{ price }}</p>
       </div>
-      <button @click="productStore.toggleLike(id)">
-        <p>
+      <button @click="productStore.toggleLike(id)" class="flex">
+        <p class="font-light">
           <i
             v-if="isLiked"
             class="material-icons favorite-icon favourite-icon-isLiked"
@@ -62,44 +67,5 @@ export default {
 }
 .favorite-icon {
   font-size: 15px;
-}
-.wrapper {
-  width: 250px;
-  background-color: beige;
-}
-
-.image {
-  height: 350px;
-  background-color: pink;
-}
-.card-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: aquamarine;
-  width: 100%;
-}
-
-button {
-  border: 0;
-  background-color: transparent;
-}
-
-img {
-  height: 100%;
-}
-
-.add-to-cart {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 8px;
-  background-color: rgba(255, 255, 255, 0.65);
-}
-
-.product-div {
-  cursor: pointer;
 }
 </style>

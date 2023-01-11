@@ -39,15 +39,6 @@ const products = [
     isLikedByCurrentUser: false,
   },
   {
-    id: 2,
-    title: "Retro Record Player",
-    price: 379,
-    image: record,
-    discount: 0,
-    likeCount: 430,
-    isLikedByCurrentUser: true,
-  },
-  {
     id: 3,
     title: "Milk & Honey Poetry",
     price: 27,
@@ -115,16 +106,16 @@ const products = [
     isLikedByCurrentUser: false,
 
   },
-  {
-    id: 10,
-    title: "Organic Hemp Seed Oil",
-    price: 30,
-    image: hempOil,
-    discount: 10,
-    likeCount: 419,
-    isLikedByCurrentUser: true,
+  // {
+  //   id: 10,
+  //   title: "Organic Hemp Seed Oil",
+  //   price: 30,
+  //   image: hempOil,
+  //   discount: 10,
+  //   likeCount: 419,
+  //   isLikedByCurrentUser: true,
 
-  },
+  // },
 ];
 
 

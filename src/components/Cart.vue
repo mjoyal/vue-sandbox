@@ -8,8 +8,9 @@ const productStore = useProductStore();
 
 <template>
   <div>
+    <h1>Cart</h1>
     <ProductCard
-      v-for="product in productStore.products"
+      v-for="product in productStore.cart"
       :key="product.id"
       :id="product.id"
       :title="product.title"
@@ -19,6 +20,7 @@ const productStore = useProductStore();
       :isLiked="product.isLikedByCurrentUser"
     />
   </div>
+  <h1>--------------------------------------------------</h1>
 </template>
 
 <script lang="ts">
@@ -26,10 +28,4 @@ export default {};
 </script>
 
 <style scoped>
-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 </style>

@@ -7,8 +7,11 @@ const productStore = useProductStore();
 <template>
   <header class="top-0 bg-teal-300 p-5 z-1">
     <nav class="flex justify-between">
-      <h3>LUKANI</h3>
-      <button @click="handleCartClick" class="flex justify-between">
+      <button @click="handleCartClick(false)">
+        <h3>LUKANI</h3>
+      </button>
+
+      <button @click="handleCartClick(true)" class="flex justify-between">
         <i class="material-icons">shopping_cart</i>
         <p>{{ productStore.cartItemCount }}</p>
       </button>
@@ -24,8 +27,8 @@ export default {
     };
   },
   methods: {
-    handleCartClick() {
-      this.showCart = !this.showCart;
+    handleCartClick(value: boolean) {
+      this.showCart = value;
       this.$emit("cartClick", this.showCart);
     },
   },

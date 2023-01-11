@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .favourite-icon-isLiked {
-  color: red;
+  color: #E355AA;
 }
 .favorite-icon {
   font-size: 15px;

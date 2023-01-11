@@ -22,6 +22,10 @@ export const useProductStore = defineStore({
       return (productId: number) =>
         state.products.find((product) => product.id === productId);
     },
+
+    cartItemCount(state) {
+      return state.cart.length;
+    },
   },
   actions: {
     toggleLike(id: number) {

@@ -14,8 +14,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="container flex border-y border-black py-5">
-    <img :src="image" width="250" />
+  <div class="container flex border-y border-black py-2">
+    <img :src="image" width="100" />
 
     <div class="">
       <div>

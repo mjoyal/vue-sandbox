@@ -10,22 +10,15 @@ const productStore = useProductStore();
   <div class="container p-5">
     <h1>Cart</h1>
     <CartProductCard
-      v-for="product in productStore.cart"
-      :key="product.id"
-      :id="product.id"
-      :title="product.title"
-      :price="product.price"
-      :likeCount="product.likeCount"
-      :image="product.image"
-      :isLiked="product.isLikedByCurrentUser"
+      v-for="cartItem in productStore.cart"
+      :cartItem="cartItem"
+      :key="cartItem.id"
     />
   </div>
-  <h1>--------------------------------------------------</h1>
 </template>
 
 <script lang="ts">
 export default {};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

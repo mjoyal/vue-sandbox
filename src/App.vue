@@ -18,9 +18,8 @@ export default {
     };
   },
   methods: {
-    // Triggered when `childToParent` event is emitted by the child.
+    // Triggered when `cartClick` event is emitted by the child.
     onChildClick(value: boolean) {
-      console.log("from child", value);
       this.showCart = value;
     },
   },

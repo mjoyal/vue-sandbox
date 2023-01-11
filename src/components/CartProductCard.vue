@@ -1,45 +1,36 @@
 <script setup lang="ts">
-import { useProductStore } from "@/stores/ProductStore";
+import  { useProductStore } from "@/stores/ProductStore";
 
 const productStore = useProductStore();
 
 defineProps<{
-  id: number;
-  title: string;
-  price: number;
-  likeCount: number;
-  image: string;
-  isLiked: boolean;
+  cartItem: any;
 }>();
 </script>
 
 <template>
-  <div class="container flex border-y border-black py-2">
-    <img :src="image" width="100" />
+  <div class="container flex border-t border-black py-3">
+    <img :src="cartItem.image" width="100" />
 
-    <div class="">
+    <div class="container pl-5">
       <div>
-        <h5>{{ title }}</h5>
-        <p>${{ price }}</p>
+        <h5>{{ cartItem.title }}</h5>
+        <p>${{ cartItem.price }}</p>
+        <p>Quantity: {{ cartItem.count }}</p>
       </div>
 
       <p>
         <i class="material-icons favorite-icon">favorite</i>
 
-        {{ likeCount }}
+        {{ cartItem.likeCount }}
       </p>
 
-      <button @click="productStore.removeFromCart(id)">Remove</button>
+      <button @click="productStore.removeFromCart(cartItem.id)">Remove</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      hover: false,
-    };
-  },
 };
 </script>

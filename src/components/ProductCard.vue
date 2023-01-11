@@ -14,7 +14,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="container w-64">
+  <div class="container w-56">
     <div
       @click="productStore.addToCart(id)"
       @mouseover="hover = true"
@@ -67,5 +67,9 @@ export default {
 }
 .favorite-icon {
   font-size: 15px;
+}
+
+p {
+  color: #1C0A62;
 }
 </style>

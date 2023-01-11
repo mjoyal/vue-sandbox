@@ -98,7 +98,7 @@ const products = [
   },
   {
     id: 9,
-    title: "Organic Lavender Candle",
+    title: "Lavender Candle",
     price: 30,
     image: candle,
     discount: 0,

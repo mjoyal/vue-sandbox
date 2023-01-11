@@ -30,16 +30,3 @@ defineProps<{
 <script lang="ts">
 export default {};
 </script>
-
-<!-- <div class="container flex border-t border-black py-3">
-  <div class="flex justify-between bg-pink-100 w-full">
-    <img :src="cartItem.image" width="100" />
-
-    <h5 class="bg-pink-500">{{ cartItem.title }}</h5>
-    <p class="bg-pink-500">${{ cartItem.price }}</p>
-    <p class="bg-pink-500">{{ cartItem.count }}</p>
-    <p class="bg-pink-500">$XX.XX</p>
-  </div>
-
-
-</div> -->

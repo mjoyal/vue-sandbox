@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useProductStore } from "@/stores/ProductStore";
-import DropDownButton from "./DropDownButton.vue";
 const productStore = useProductStore();
 
 defineProps<{
